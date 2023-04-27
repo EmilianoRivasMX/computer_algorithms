@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link  rel="icon" href="./img/logo.png" type="image/png" />
+
+    <!-- Bootswatch CDN -->
+    <link rel="stylesheet" 
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/5.2.3/lux/bootstrap.min.css" 
+        integrity="sha512-+TCHrZDlJaieLxYGAxpR5QgMae/jFXNkrc6sxxYsIVuo/28nknKtf9Qv+J2PqqPXj0vtZo9AKW/SMWXe8i/o6w==" 
+        crossorigin="anonymous" 
+        referrerpolicy="no-referrer" />
+    
+    <!-- Bootstrap bundle -->
+    <script 
+        defer
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" 
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" 
+        crossorigin="anonymous" >
+    </script>
+
+    <script src="./js/index.js" defer></script>
+
+    <title>Algoritmos 3NV31</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container-fluid">
+            <img src="./img/logo.png" alt="Logo de la UPIICSA" width="50px" class="m-3">
+            <a class="navbar-brand" href="index.html">Algoritmos 3NV31</a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarColor01">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Inicio
+                            <span class="visually-hidden">(current)</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Alumnos y calificaciones</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Tareas</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="m-5">
+        <div class="d-flex justify-content-between mb-4">
+            <h1>Alumnos y calificaciones</h1>
+
+            <select name="sortBy" id="sortButton" class="form-select w-25">
+                <option disabled selected>Ordenar por: </option>
+                <option value="boleta">Boleta</option>
+                <option value="nombre">Nombre</option>
+                <option value="apellido_paterno">Apellido paterno</option>
+                <option value="apellido_materno">Apellido materno</option>
+                <option value="primer_parcial">1er parcial</option>
+                <option value="segundo_parcial">2do parcial</option>
+                <option value="tercer_parcial">3er parcial</option>
+                <option value="calificacion_final">Calificación final</option>
+            </select>
+        </div>
+
+        <table id="alumnos_y_calificaciones" class="table table-dark table-hover text-center align-middle">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Boleta</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Apellido Paterno</th>
+                <th scope="col">Apellido Materno</th>
+                <th scope="col">1er Parcial</th>
+                <th scope="col">2do Parcial</th>
+                <th scope="col">3er Parcial</th>
+                <th scope="col">Final</th>
+                <th scope="col">Opciones</th>
+              </tr>
+            </thead>
+
+            <tbody>
+                <tr class="table-light">
+                <th scope="row">1</th>
+                <td class="boleta">2022605922</td>
+                <td class="nombre">Emiliano</td>
+                <td class="apellido_paterno">Rivas</td>
+                <td class="apellido_materno">Ladinos</td>
+                <td class="primer_parcial">9</td>
+                <td class="segundo_parcial">10</td>
+                <td class="tercer_parcial">8</td>
+                <td class="calificacion_final">9</td>
+                <td>
+                    <button type="button" class="btn btn-warning">Editar</button>
+                    <button type="button" class="btn btn-danger">Eliminar</button>
+                </td>
+                </tr>
+              
+                <tr class="table-light">
+                <th scope="row">2</th>
+                <td class="boleta">2022549112</td>
+                <td class="nombre">Oscar</td>
+                <td class="apellido_paterno">Chávez</td>
+                <td class="apellido_materno">Moreno</td>
+                <td class="primer_parcial">7</td>
+                <td class="segundo_parcial">8</td>
+                <td class="tercer_parcial">10</td>
+                <td class="calificacion_final">8</td>
+                <td>
+                    <button type="button" class="btn btn-warning">Editar</button>
+                    <button type="button" class="btn btn-danger">Eliminar</button>
+                </td>
+                </tr>
+
+                <tr class="table-light">
+                <th scope="row">3</th>
+                <td class="boleta">2021546092</td>
+                <td class="nombre">Angela</td>
+                <td class="apellido_paterno">Pérez</td>
+                <td class="apellido_materno">Ramírez</td>
+                <td class="primer_parcial">10</td>
+                <td class="segundo_parcial">10</td>
+                <td class="tercer_parcial">9</td>
+                <td class="calificacion_final">10</td>
+                <td>
+                    <button type="button" class="btn btn-warning">Editar</button>
+                    <button type="button" class="btn btn-danger">Eliminar</button>
+                </td>
+                </tr>
+
+                <tr class="table-light">
+                    <th scope="row">4</th>
+                    <td class="boleta">2021605930</td>
+                    <td class="nombre">María</td>
+                    <td class="apellido_paterno">Hernández</td>
+                    <td class="apellido_materno">Pérez</td>
+                    <td class="primer_parcial">2</td>
+                    <td class="segundo_parcial">5</td>
+                    <td class="tercer_parcial">6</td>
+                    <td class="calificacion_final">4</td>
+                    <td>
+                        <button type="button" class="btn btn-warning">Editar</button>
+                        <button type="button" class="btn btn-danger">Eliminar</button>
+                    </td>
+                </tr>
+
+                <tr class="table-light">
+                    <th scope="row">5</th>
+                    <td class="boleta">2020605944</td>
+                    <td class="nombre">Sofía</td>
+                    <td class="apellido_paterno">Hernández</td>
+                    <td class="apellido_materno">García</td>
+                    <td class="primer_parcial">8</td>
+                    <td class="segundo_parcial">8</td>
+                    <td class="tercer_parcial">6</td>
+                    <td class="calificacion_final">7</td>
+                    <td>
+                        <button type="button" class="btn btn-warning">Editar</button>
+                        <button type="button" class="btn btn-danger">Eliminar</button>
+                    </td>
+                </tr>
+
+                <tr class="table-light">
+                    <th scope="row">6</th>
+                    <td class="boleta">2022605933</td>
+                    <td class="nombre">Javier</td>
+                    <td class="apellido_paterno">Méndez</td>
+                    <td class="apellido_materno">López</td>
+                    <td class="primer_parcial">7</td>
+                    <td class="segundo_parcial">9</td>
+                    <td class="tercer_parcial">4</td>
+                    <td class="calificacion_final">7</td>
+                    <td>
+                        <button type="button" class="btn btn-warning">Editar</button>
+                        <button type="button" class="btn btn-danger">Eliminar</button>
+                    </td>
+                </tr>
+
+                <tr class="table-light">
+                    <th scope="row">7</th>
+                    <td class="boleta">2021605923</td>
+                    <td class="nombre">Adriana</td>
+                    <td class="apellido_paterno">González</td>
+                    <td class="apellido_materno">Hernández</td>
+                    <td class="primer_parcial">3</td>
+                    <td class="segundo_parcial">4</td>
+                    <td class="tercer_parcial">7</td>
+                    <td class="calificacion_final">5</td>
+                    <td>
+                        <button type="button" class="btn btn-warning">Editar</button>
+                        <button type="button" class="btn btn-danger">Eliminar</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+</body>
+</html>
