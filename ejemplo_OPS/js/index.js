@@ -13,7 +13,7 @@ function ordenarPorSeleccion(columnaAOrdenar) {
     for (let i = 1; i < numFilas; i++) {
         let filaMenor = i;
 
-        // Busca el indice de la fila que contiene el menor valor en la columna que se le pasa como parametro
+        // Busca el indice de la fila que contiene el elemento de menor en la columna que se le pasa como parametro
         for (let j = i + 1; j < numFilas; j++) {
             let valor1 = filas[j].querySelector("td." + columnaAOrdenar).innerText;
             let valor2 = filas[filaMenor].querySelector("td." + columnaAOrdenar).innerText;
@@ -31,12 +31,11 @@ function ordenarPorSeleccion(columnaAOrdenar) {
 
         // Si la fila con el menor valor no es la misma que la fila actual, se intercambian
         if (filaMenor != i) {
-            console.log(filas[i])
-            console.log(filas[filaMenor])
-
+            // Se obtienen los padres de las filas a intercambiar
             let parent1 = filas[i].parentNode;
             let parent2 = filas[filaMenor].parentNode;
 
+            // Se intercambian las filas
             parent2.insertBefore(filas[i], filas[filaMenor]);
             parent1.insertBefore(filas[filaMenor], filas[i]);
         }
