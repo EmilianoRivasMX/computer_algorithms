@@ -19,7 +19,7 @@ function ordenarPorSeleccion(columnaAOrdenar) {
             let valor2 = filas[filaMenor].querySelector("td." + columnaAOrdenar).innerText;
 
             // Si la columna es de tipo numerico, se convierte a entero para poder comparar
-            if(columnaAOrdenar == "primer_parcial" || columnaAOrdenar == "segundo_parcial" || columnaAOrdenar == "tercer_parcial" || columnaAOrdenar == "calificacion_final") {
+            if(columnaAOrdenar == "por_defecto" || columnaAOrdenar == "primer_parcial" || columnaAOrdenar == "segundo_parcial" || columnaAOrdenar == "tercer_parcial" || columnaAOrdenar == "calificacion_final") {
                 valor1 = parseInt(valor1);
                 valor2 = parseInt(valor2);
             }
